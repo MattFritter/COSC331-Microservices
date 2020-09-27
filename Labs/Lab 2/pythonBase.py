@@ -20,7 +20,6 @@ class MyServer(BaseHTTPRequestHandler):
         self.end_headers()
         if self.getPage() == '/':
             self.wfile.write(bytes("Hello World! " + self.getPage(), "utf-8"))
-            self.wfile.write(bytes(str(self.getParams()), "utf-8"))
     
     # Gets the query parameters of a request and returns them as a dictionary
     def getParams(self):
